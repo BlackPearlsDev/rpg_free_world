@@ -1,4 +1,4 @@
-# rpg_free_world
+# rpg_free_world v1.0
 
 ## To use this project follow this steps
 
