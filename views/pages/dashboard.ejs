@@ -1,0 +1,22 @@
+<main>
+    <section class="dashboard">
+        <h2>Bienvenue dans ton dashboard, <%= locals.session.user?.pseudo %></h2>
+    
+        <h3>Tes classes</h3>
+
+        <section class="allClassesDashboard">
+            <% for( let i = 0; i < classes.length; i++ ) { %>
+                <section class="classesDashboard">
+                    <h4>(<%= i + 1 %>) <span class="txtClassesBlue">Classe</span>: <%= classes[i].classeName %></h4>
+                    <p><span class="txtClassesBlue">Spécialisation</span>: <%= classes[i].role %></p>
+                    <p><span class="txtClassesBlue">Dégâts</span>: <%= classes[i].dps %></p>
+                    <p><span class="txtClassesBlue">PDV</span>: <%= classes[i].health %></p>
+                    <p><span class="txtClassesBlue">Armure</span>: <%= classes[i].armor %></p>
+                    <p><span class="txtClassesBlue">Pièces d'or</span>: <%= classes[i].gold %></p>
+                </section>
+            <% } %>
+        </section>
+
+        <a href="/logout" class="txtHyperLink">Déconnexion</a>
+    </section>
+</main>

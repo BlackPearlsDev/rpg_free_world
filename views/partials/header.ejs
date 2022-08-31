@@ -1,0 +1,17 @@
+<header>
+    <section class="logoAndTitle">
+        <img src="/img/logoSword.png" alt="logo des épées">
+        <h1>Free World</h1>
+        <img src="/img/logoSword.png" alt="logo des épées">
+    </section>
+    <nav>
+        <a href="/">Acceuil</a>
+        <% if (locals.session.isLogged) { %>
+        <a href="/ladder">Classement</a>
+        <a href="/creator">Créateur</a>
+            <a href="/dashboard">Mon compte</a>
+        <% } else { %>
+            <a href="/login">Connexion</a>
+        <% } %> 
+    </nav>
+</header>

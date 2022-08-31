@@ -1,0 +1,124 @@
+<main id="home">
+    <h2>Le classements des meilleurs joueurs !</h2>
+    <section class="ladderBox">
+        <h3>Classements Dégâts</h3>
+        <table>
+            <thead>
+                <tr>
+                    <th>Position</th>
+                    <th>Classe</th>
+                    <th>Spécialisation</th>
+                    <th>Dégâts</th>
+                    <th>PDV</th>
+                    <th>Armure</th>
+                    <th>Pièces d'or</th>
+                    <th>Appartient à</th>
+                </tr>
+            </thead>
+            <tbody>
+                <% for (let i = 0; i < dataDPS.length; i++) { %>
+                    <tr>
+                        <td><%= i + 1 %></td>
+                        <td><%= dataDPS[i].classeName %></td>
+                        <td><%= dataDPS[i].role %></td>
+                        <td><%= dataDPS[i].dps %></td>
+                        <td><%= dataDPS[i].health %></td>
+                        <td><%= dataDPS[i].armor %></td>
+                        <td><%= dataDPS[i].gold %></td>
+                        <td><%= dataDPS[i].pseudo %></td>
+                    </tr>
+                <% } %>
+            </tbody>
+        </table>
+
+        <h3>Classements PDV</h3>
+        <table>
+            <thead>
+                <tr>
+                    <th>Position</th>
+                    <th>Classe</th>
+                    <th>Spécialisation</th>
+                    <th>Dégâts</th>
+                    <th>PDV</th>
+                    <th>Armure</th>
+                    <th>Pièces d'or</th>
+                    <th>Appartient à</th>
+                </tr>
+            </thead>
+            <tbody>
+                <% for (let i = 0; i < dataPDV.length; i++) { %>
+                    <tr>
+                        <td><%= i + 1 %></td>
+                        <td><%= dataPDV[i].classeName %></td>
+                        <td><%= dataPDV[i].role %></td>
+                        <td><%= dataPDV[i].dps %></td>
+                        <td><%= dataPDV[i].health %></td>
+                        <td><%= dataPDV[i].armor %></td>
+                        <td><%= dataPDV[i].gold %></td>
+                        <td><%= dataPDV[i].pseudo %></td>
+                    </tr>
+                <% } %>
+            </tbody>
+        </table>
+
+        <h3>Classements Armure</h3>
+        <table>
+            <thead>
+                <tr>
+                    <th>Position</th>
+                    <th>Classe</th>
+                    <th>Spécialisation</th>
+                    <th>Dégâts</th>
+                    <th>PDV</th>
+                    <th>Armure</th>
+                    <th>Pièces d'or</th>
+                    <th>Appartient à</th>
+                </tr>
+            </thead>
+            <tbody>
+                <% for (let i = 0; i < dataArmor.length; i++) { %>
+                    <tr>
+                        <td><%= i + 1 %></td>
+                        <td><%= dataArmor[i].classeName %></td>
+                        <td><%= dataArmor[i].role %></td>
+                        <td><%= dataArmor[i].dps %></td>
+                        <td><%= dataArmor[i].health %></td>
+                        <td><%= dataArmor[i].armor %></td>
+                        <td><%= dataArmor[i].gold %></td>
+                        <td><%= dataArmor[i].pseudo %></td>
+                    </tr>
+                <% } %>
+            </tbody>
+        </table>
+
+        <h3>Classements Pièces d'or</h3>
+        <table>
+            <thead>
+                <tr>
+                    <th>Position</th>
+                    <th>Classe</th>
+                    <th>Spécialisation</th>
+                    <th>Dégâts</th>
+                    <th>PDV</th>
+                    <th>Armure</th>
+                    <th>Pièces d'or</th>
+                    <th>Appartient à</th>
+                </tr>
+            </thead>
+            <tbody>
+                <% for (let i = 0; i < dataGold.length; i++) { %>
+                    <tr>
+                        <td><%= i + 1 %></td>
+                        <td><%= dataGold[i].classeName %></td>
+                        <td><%= dataGold[i].role %></td>
+                        <td><%= dataGold[i].dps %></td>
+                        <td><%= dataGold[i].health %></td>
+                        <td><%= dataGold[i].armor %></td>
+                        <td><%= dataGold[i].gold %></td>
+                        <td><%= dataGold[i].pseudo %></td>
+                    </tr>
+                <% } %>
+            </tbody>
+        </table>
+    </section>
+</main>

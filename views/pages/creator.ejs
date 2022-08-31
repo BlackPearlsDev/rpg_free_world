@@ -1,0 +1,50 @@
+<main id="creator">
+    <section>
+        <article>
+            <h2>Bienvenue dans le créateur de classes !</h2>
+
+            <p>Ici tu va pour voir créer et customiser tes classes comme bon te semble.</p>
+            <p>Choisis bien tout les paramètres et deviens le meilleur du <a href="/ladder" class="txtHyperLink">classement</a>.</p>
+            <p>Tu pourra consulter toutes tes classes dans ton <a href="/dashboard" class="txtHyperLink">dashboard</a>.</p>
+        </article>
+    </section>
+
+    <form action="" method="post" class="formCreator">
+        <div class="zone1">
+            <label for="">Nom de la classe</label>
+            <select name="classeName" id="classeName-select">
+                <option value="">--Choisissez une option--</option>
+                <% for (const classe of classes) { %>
+                    <option value="<%= classe.name %>"><%= classe.name %></option>
+                <% } %>
+            </select>
+
+            <label for="">Spécialisation</label>
+            <select name="role" id="role-select">
+                <option value="">--Choisissez une option--</option>
+                <% for (const classe of classes) { %>
+                    <option value="<%= classe.name %>"><%= classe.name %></option>
+                <% } %>
+            </select>
+        </div>
+
+        <div class="zone2">
+            <label for="">DPS</label>
+            <input type="number" name="dps" id="dps" min="1" max="1" maxlength="3">
+            
+            <label for="">PDV</label>
+            <input type="number" name="health" id="health" min="1" max="1" maxlength="3">
+        </div>
+
+        <div class="zone3">
+            <label for="">Armure</label>
+            <input type="number" name="armor" id="armor" min="1" max="1" maxlength="3">
+
+            <label for="">Pièces d'or</label>
+            <input type="number" name="gold" id="gold" min="1" max="1" maxlength="3">
+        </div>
+        
+        <input type="submit" value="Valider" id="btnSendCreator">
+    </form>
+
+</main>
