@@ -10,3 +10,11 @@ Are you ready for the Battle ?
 ### Third Just launch and use ! :) 
 
 WARNING ! NEVER DELETE TABLE classes_template IN THE DB ! 
+
+OPTIONAL : You can use the background image easily by changing the css rules here :
+
+```css
+background: url("../img/fond3.webp") no-repeat center;
+```
+
+Change by: fond.webp / fond2.webp / fond3.webp

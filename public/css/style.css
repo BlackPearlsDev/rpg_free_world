@@ -13,7 +13,8 @@ html {
 body {
 	font-family: 'Oxanium', cursive;
 	font-size: 1.6rem;
-	background: url("../img/fond.webp") no-repeat fixed;
+	background: url("../img/fond3.webp") no-repeat center;
+	background-size: cover;
 }
 
 header {
@@ -38,6 +39,12 @@ header {
 h1 {
 	font-size: 4rem;
 	text-align: center;
+	transition: all 0.5s;
+}
+
+h1:hover {
+	color: #16b4b4;
+	transform: scale(1.1);
 }
 
 nav {
@@ -50,6 +57,7 @@ nav a {
 	text-decoration: none;
 	color: white;
 	font-size: 2rem;
+	transition: all 0.5s;
 }
 
 nav a:hover {
@@ -65,6 +73,7 @@ nav a:hover {
 
 .txtHyperLink {
 	color: #16b4b4;
+	transition: all 0.5s;
 }
 
 .txtHyperLink:hover {
@@ -79,8 +88,11 @@ nav a:hover {
 #home {
 	max-width: 80%;
 	margin: 2% auto;
+	padding: 1%;
 	text-align: center;
 	color: white;
+	background-color: rgba(200, 200, 200, 0.1);
+	border-radius: 10px;
 }
 
 #home h2 {
@@ -234,8 +246,6 @@ form input[type="submit"]:hover {
 
 .ladderBox {
 	margin: 2% auto;
-	background-color: rgba(200, 200, 200, 0.1);
-	border-radius: 10px;
 	padding: 1%;
 }
 
@@ -244,7 +254,7 @@ form input[type="submit"]:hover {
 	margin: 2% auto;
 	border-collapse: collapse;
 	border: 1px solid grey;
-	background-color: rgba(200, 200, 200, 0.1);
+	background-color: rgba(200, 200, 200, 0.2);
 }
 
 .ladderBox thead {
@@ -253,12 +263,8 @@ form input[type="submit"]:hover {
 	font-size: 1.8rem;
 }
 
-.ladderBox td {
+.ladderBox td, .ladderBox th {
 	padding: 1%;
-}
-
-.ladderBox tr:hover {
-	color: #16b4b4;
 }
 
 .ladderBox tr:nth-child(even) {

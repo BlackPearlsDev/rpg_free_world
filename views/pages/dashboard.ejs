@@ -5,15 +5,19 @@
         <h3>Tes classes</h3>
 
         <section class="allClassesDashboard">
-            <% for( let i = 0; i < classes.length; i++ ) { %>
-                <section class="classesDashboard">
-                    <h4>(<%= i + 1 %>) <span class="txtClassesBlue">Classe</span>: <%= classes[i].classeName %></h4>
-                    <p><span class="txtClassesBlue">Spécialisation</span>: <%= classes[i].role %></p>
-                    <p><span class="txtClassesBlue">Dégâts</span>: <%= classes[i].dps %></p>
-                    <p><span class="txtClassesBlue">PDV</span>: <%= classes[i].health %></p>
-                    <p><span class="txtClassesBlue">Armure</span>: <%= classes[i].armor %></p>
-                    <p><span class="txtClassesBlue">Pièces d'or</span>: <%= classes[i].gold %></p>
-                </section>
+            <% if (classes.length > 0) { %>
+                <% for( let i = 0; i < classes.length; i++ ) { %>
+                    <section class="classesDashboard">
+                        <h4>(<%= i + 1 %>) <span class="txtClassesBlue">Classe</span>: <%= classes[i].classeName %></h4>
+                        <p><span class="txtClassesBlue">Spécialisation</span>: <%= classes[i].role %></p>
+                        <p><span class="txtClassesBlue">Dégâts</span>: <%= classes[i].dps %></p>
+                        <p><span class="txtClassesBlue">PDV</span>: <%= classes[i].health %></p>
+                        <p><span class="txtClassesBlue">Armure</span>: <%= classes[i].armor %></p>
+                        <p><span class="txtClassesBlue">Pièces d'or</span>: <%= classes[i].gold %></p>
+                    </section>
+                <% } %>
+            <% } else { %>
+                    <p>Tu n'a pas de classe(s), n'hésite pas à aller en créer dans le <a href="/creator" class="txtHyperLink">créateur</a> !</p>
             <% } %>
         </section>
 

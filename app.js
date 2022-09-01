@@ -31,7 +31,6 @@ app.use(session({
 }));
 
 app.use((req, res, next)=>{
-    // console.log("req.session ----->",req.session);
     res.locals.session = req.session;
     res.locals.error = null;
     
@@ -39,8 +38,6 @@ app.use((req, res, next)=>{
         req.session.user = null;
         req.session.isLogged = false;
     }
-    
-    // console.log("res.locals.session ---->",res.locals.session);
     next();
 });
 
