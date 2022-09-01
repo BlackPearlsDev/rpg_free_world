@@ -13,7 +13,7 @@
         <div class="zone1">
             <label for="">Nom de la classe</label>
             <select name="classeName" id="classeName-select">
-                <option value="">--Choisissez une option--</option>
+                <option value="">-- Choisissez une classe --</option>
                 <% for (const classe of classes) { %>
                     <option value="<%= classe.name %>"><%= classe.name %></option>
                 <% } %>
@@ -21,9 +21,9 @@
 
             <label for="">Spécialisation</label>
             <select name="role" id="role-select">
-                <option value="">--Choisissez une option--</option>
-                <% for (const classe of classes) { %>
-                    <option value="<%= classe.role %>"><%= classe.role %></option>
+                <option value="">-- Choisissez une spécialisation --</option>
+                <% for( const spec of specs ) { %>
+                    <option value="<%= spec.specName %>"><%= spec.specName %></option>
                 <% } %>
             </select>
         </div>

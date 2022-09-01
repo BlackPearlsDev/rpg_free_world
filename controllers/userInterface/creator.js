@@ -6,9 +6,11 @@ function getRandomInteger(min, max) {
 }
 
 export const pageCreator = async (req, res) => {
-    const query = `SELECT * FROM classes_template`;
-    const result = await Main.getData(query);
-    res.render("layout", {template: "pages/creator", classes: result});
+    const query1 = `SELECT id, name FROM classes_template`;
+    const query2 = `SELECT specName, style, classes_id, classes_template.name AS classeName FROM specs_template JOIN classes_template ON specs_template.classes_id = classes_template.id`;
+    const result = await Main.getData(query1);
+    const result2 = await Main.getData(query2);
+    res.render("layout", {template: "pages/creator", classes: result, specs: result2});
 }
 
 export const creatorPost = async (req, res) => {
