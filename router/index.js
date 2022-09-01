@@ -18,7 +18,7 @@ router.get("/error", pageError);
 router.use("/login", loginRoute);
 router.use("/register", registerRoute);
 router.use("/logout", logoutRoute);
-router.use("/creator", creatorRoute);
+router.use("/creator", userOnly, creatorRoute);
 router.use("/dashboard", userOnly, dashboardRoute);
 router.use("/ladder", ladderRoute);
 

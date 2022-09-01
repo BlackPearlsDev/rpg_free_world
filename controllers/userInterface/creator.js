@@ -39,6 +39,7 @@ export const creatorPost = async (req, res) => {
 
             const [resultTest] = await POOL.execute("INSERT INTO classes (classeName, role, dps, health, armor, gold, account_id) VALUES (?, ?, ?, ?, ?, ?, ?)", [classeName, role, dpsValue, healthValue, armorValue, goldValue, result.id]);
             // const [query] = await Main.saveCreator(query2, classeName, role, dpsValue, healthValue, armorValue, goldValue, result.id);
+            console.log('resultTest', resultTest);
             res.redirect("/creator");
         }
     } catch (error) {
