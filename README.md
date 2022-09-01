@@ -1,4 +1,4 @@
-# rpg_free_world v1.1
+# rpg_free_world v1.2
 Are you ready for the Battle ?
 
 ## To use this project follow this steps
