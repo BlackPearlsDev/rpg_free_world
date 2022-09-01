@@ -222,7 +222,7 @@ form input[type="submit"]:hover {
 
 .classesDashboard {
 	display: flex;
-	flex-direction: column;
+	justify-content: space-between;
 	align-items: flex-start;
 	width: 25%;
 	margin: 2%;
@@ -238,6 +238,18 @@ form input[type="submit"]:hover {
 .classesDashboard p {
 	font-size: 1.8rem;
 	font-weight: bold;
+}
+
+.btnDeleteClasse {
+	background-color: transparent;
+	border: none;
+	padding: 3px;
+	border-radius: 50%;
+	text-decoration: none;
+}
+
+.btnDeleteClasse:hover {
+	background-color: white;
 }
 
 .txtClassesBlue {

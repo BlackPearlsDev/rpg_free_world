@@ -13,3 +13,13 @@ export const pageDashboard = async (req, res) => {
         console.log(error);
     }
 }
+
+export const deleteClasse = async (req, res) => {
+    try {
+        const query = "DELETE FROM classes WHERE Id = ? ";
+        await Main.delete(query, req.params.id);
+        res.redirect("/dashboard");
+    } catch (error) {
+        console.log(error)
+    }
+}

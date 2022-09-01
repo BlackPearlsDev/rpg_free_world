@@ -8,12 +8,16 @@
             <% if (classes.length > 0) { %>
                 <% for( let i = 0; i < classes.length; i++ ) { %>
                     <section class="classesDashboard">
-                        <h4>(<%= i + 1 %>) <span class="txtClassesBlue">Classe</span>: <%= classes[i].classeName %></h4>
-                        <p><span class="txtClassesBlue">Spécialisation</span>: <%= classes[i].role %></p>
-                        <p><span class="txtClassesBlue">Dégâts</span>: <%= classes[i].dps %></p>
-                        <p><span class="txtClassesBlue">PDV</span>: <%= classes[i].health %></p>
-                        <p><span class="txtClassesBlue">Armure</span>: <%= classes[i].armor %></p>
-                        <p><span class="txtClassesBlue">Pièces d'or</span>: <%= classes[i].gold %></p>
+                        <article>
+                            <h4>(<%= i + 1 %>) <span class="txtClassesBlue">Classe</span>: <%= classes[i].classeName %></h4>
+                            <p><span class="txtClassesBlue">Spécialisation</span>: <%= classes[i].role %></p>
+                            <p><span class="txtClassesBlue">Dégâts</span>: <%= classes[i].dps %></p>
+                            <p><span class="txtClassesBlue">PDV</span>: <%= classes[i].health %></p>
+                            <p><span class="txtClassesBlue">Armure</span>: <%= classes[i].armor %></p>
+                            <p><span class="txtClassesBlue">Pièces d'or</span>: <%= classes[i].gold %></p>
+                        </article>
+                        
+                        <a href="/dashboard/delete/<%= classes[i].id %>" class="btnDeleteClasse">❌</a>
                     </section>
                 <% } %>
             <% } else { %>

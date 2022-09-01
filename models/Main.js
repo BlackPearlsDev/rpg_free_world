@@ -28,6 +28,11 @@ class Main {
         const [result] = await POOL.execute(query, [...val]);
         return result;
     }
+
+    static async delete(query, id){
+        const [result] = await POOL.execute(query, [id]);
+        return result;
+    }
 }
 
 export default Main;
