@@ -8,16 +8,18 @@ import creatorRoute from './creator.routes.js';
 import dashboardRoute from './dashboard.routes.js';
 import ladderRoute from './ladder.routes.js';
 
+import userOnly from '../middlewares/userOnly.js';
+
 import {homePage, pageNotFound, pageError} from '../controllers/index.js';
 
-router.get("/", homePage );
-router.get("/error", pageError );
+router.get("/", homePage);
+router.get("/error", pageError);
 
 router.use("/login", loginRoute);
 router.use("/register", registerRoute);
 router.use("/logout", logoutRoute);
 router.use("/creator", creatorRoute);
-router.use("/dashboard", dashboardRoute);
+router.use("/dashboard", userOnly, dashboardRoute);
 router.use("/ladder", ladderRoute);
 
 router.all("/*", pageNotFound);
