@@ -7,6 +7,15 @@ Are you ready for the Battle ?
 
 ### Second install all npm and create .env file for the DB
 
+.env file
+```js
+LOCAL_PORT = [YOUR PORT]
+DB_HOST = [YOUR IP DATABASE]
+DB_USER = [USER NAME]
+DB_PWD = [USER PASSWORD]
+DB_NAME = exo_libre
+```
+
 ### Third Just launch and use ! :) 
 
 WARNING ! NEVER DELETE TABLE classes_template IN THE DB ! 
