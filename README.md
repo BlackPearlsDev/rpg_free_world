@@ -1,6 +1,8 @@
 # rpg_free_world v1.2
 Are you ready for the Battle ?
 
+Try it now: https://rpgfreeworld.herokuapp.com
+
 ## To use this project follow this steps
 
 ### First install the SQL files locally ' exo_libre.sql ', it's the DB
